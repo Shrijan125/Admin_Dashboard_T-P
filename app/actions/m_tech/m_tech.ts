@@ -70,7 +70,7 @@ export async function get_mtech_stats() {
       throw new Error('Unauthorized');
     }
     try {
-      connectToDB();
+      await connectToDB();
       const stats: StatsFormProps[] = await Mtech.find({}).select('-__v');
       return stats;
     } catch (error) {
@@ -86,7 +86,7 @@ export async function get_mtech_stats_by_id(id: string) {
     }
     let stats: StatsFormProps | null;
     try {
-      connectToDB();
+      await connectToDB();
       stats = await Mtech.findById(id).select('-__v');
     } catch (error) {
       console.log(error);
@@ -134,7 +134,7 @@ export async function get_mtech_stats_by_id(id: string) {
       throw new Error('All fields are required!');
     }
     try {
-      connectToDB();
+      await connectToDB();
       await Mtech.findOneAndUpdate(
         { year },
         {
@@ -169,7 +169,7 @@ export async function get_mtech_stats_by_id(id: string) {
       throw new Error('Id is required!');
     }
     try {
-      connectToDB();
+      await connectToDB();
       await Mtech.findByIdAndDelete(id);
     } catch (error) {
       console.log(error);

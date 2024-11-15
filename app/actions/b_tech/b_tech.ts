@@ -45,7 +45,7 @@ export async function add_stats(formdata: FormData) {
   }
   let data;
   try {
-    connectToDB();
+    await connectToDB();
     data = await Btech.findOne({ year: year });
   }
   catch (error) {
@@ -59,7 +59,7 @@ export async function add_stats(formdata: FormData) {
   
 
   try {
-    connectToDB();
+    await connectToDB();
     await Btech.create({
       year,
       lowestpackage,
@@ -90,7 +90,7 @@ export async function get_btech_stats() {
     throw new Error('Unauthorized');
   }
   try {
-    connectToDB();
+    await connectToDB();
     const stats: StatsFormProps[] = await Btech.find({}).select('-__v');
     return stats;
   } catch (error) {
@@ -105,7 +105,7 @@ export async function get_btech_stats_by_id(id: string) {
     throw new Error('Unauthorized');
   }
   try {
-    connectToDB();
+    await connectToDB();
     const stats: StatsFormProps | null = await Btech.findById(id);
     if (!stats) {
       throw new Error('Stats not found');
@@ -154,7 +154,7 @@ export async function update_stats(formdata: FormData) {
     throw new Error('All fields are required!');
   }
   try {
-    connectToDB();
+    await connectToDB();
     await Btech.findOneAndUpdate(
       { year },
       {
@@ -189,7 +189,7 @@ export async function delete_btech_stats(id: string) {
     throw new Error('Id is required!');
   }
   try {
-    connectToDB();
+    await connectToDB();
     await Btech.findByIdAndDelete(id);
   } catch (error) {
     console.log(error);

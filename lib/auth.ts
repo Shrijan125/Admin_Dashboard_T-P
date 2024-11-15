@@ -19,7 +19,7 @@ export const authOptions = {
       ) {
         if (!credentials) return null;
         try {
-          connectToDB();
+          await await connectToDB();
           const admin = await Admin.findOne({
             email: credentials?.username,
           }).select('password name id');
