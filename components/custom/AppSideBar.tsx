@@ -24,6 +24,14 @@ const items = [
     title: 'M.Tech Statistics',
     url: '/mtech_statistics',
   },
+  {
+    title: 'Alumni',
+    url: '/alumni',
+  },
+  {
+    title: 'Recruiters',
+    url: '/recruiters',
+  },
 ];
 
 export async function AppSidebar() {

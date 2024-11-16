@@ -33,7 +33,7 @@ const BTechModel: Schema<StatsFormProps> = new Schema({
   },
   medianpackage: {
     type: String,
-    default:''
+    default: '',
   },
   medianpackageunit: {
     type: String,
@@ -57,7 +57,7 @@ const BTechModel: Schema<StatsFormProps> = new Schema({
   },
   highestpackageoffcampus: {
     type: String,
-    default:''
+    default: '',
   },
   highestpackageoffcampusunit: {
     type: String,
@@ -65,7 +65,7 @@ const BTechModel: Schema<StatsFormProps> = new Schema({
   },
   noofcompaniesvisited: {
     type: String,
-    default:''
+    default: '',
   },
   placementpercentage: {
     type: String,

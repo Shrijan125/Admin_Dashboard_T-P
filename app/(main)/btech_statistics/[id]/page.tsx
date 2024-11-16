@@ -1,4 +1,7 @@
-import { get_btech_stats_by_id, update_stats } from '@/app/actions/b_tech/b_tech';
+import {
+  get_btech_stats_by_id,
+  update_stats,
+} from '@/app/actions/b_tech/b_tech';
 import ErrorHandler from '@/components/custom/ErrorHandler';
 import StatsForm from '@/components/custom/StatsForm';
 import { StatsFormProps } from '@/db/models/btech.model';

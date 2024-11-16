@@ -6,6 +6,7 @@ import { get_btech_stats } from '@/app/actions/b_tech/b_tech';
 import ErrorHandler from '@/components/custom/ErrorHandler';
 import StatsTable from '@/components/custom/StatsTable';
 import { StatsFormProps } from '@/db/models/btech.model';
+import LinkButton from '@/components/custom/LinkButton';
 
 const page = async () => {
   let stats: StatsFormProps[] = [];
@@ -22,9 +23,7 @@ const page = async () => {
     <div className="flex flex-col px-6">
       <div className="text-white flex justify-between mt-4">
         <h1 className="text-2xl font-semibold">B.Tech Statistics</h1>
-        <Button asChild>
-          <Link href={'/btech_statistics/add_new'}>Add New</Link>
-        </Button>
+        <LinkButton route="/btech_statistics/add_new"></LinkButton>
       </div>
       <StatsTable isBtech={true} stats={stats}></StatsTable>
     </div>

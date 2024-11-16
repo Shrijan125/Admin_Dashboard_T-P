@@ -47,16 +47,13 @@ export async function add_stats(formdata: FormData) {
   try {
     await connectToDB();
     data = await Btech.findOne({ year: year });
-  }
-  catch (error) {
+  } catch (error) {
     throw new Error('Something went wrong');
   }
 
-  if(data)
-  {
-      throw new Error('Data already exists for this year)');
-  } 
-  
+  if (data) {
+    throw new Error('Data already exists for this year');
+  }
 
   try {
     await connectToDB();

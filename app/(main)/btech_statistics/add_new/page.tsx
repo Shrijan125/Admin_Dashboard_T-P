@@ -9,25 +9,25 @@ const page = () => {
         Annual Placement Details (B.Tech)
       </h1>
       <StatsForm
-  stats={{
-    year: '',
-    noofcompaniesvisited: '',
-    placementpercentage: '',
-    lowestpackage: '',
-    lowestpackageunit: '',
-    medianpackage: '',
-    medianpackageunit: '',
-    averagepackage: '',
-    averagepackageunit: '',
-    highestpackageoncampus: '',
-    highestpackageoncampusunit: '',
-    highestpackageoffcampus: '',
-    highestpackageoffcampusunit: '',
-  }}
-  allowed={true}
-  isBtech={true}
-  statsFunction={add_stats}
-/>
+        stats={{
+          year: '',
+          noofcompaniesvisited: '',
+          placementpercentage: '',
+          lowestpackage: '',
+          lowestpackageunit: '',
+          medianpackage: '',
+          medianpackageunit: '',
+          averagepackage: '',
+          averagepackageunit: '',
+          highestpackageoncampus: '',
+          highestpackageoncampusunit: '',
+          highestpackageoffcampus: '',
+          highestpackageoffcampusunit: '',
+        }}
+        allowed={true}
+        isBtech={true}
+        statsFunction={add_stats}
+      />
     </div>
   );
 };

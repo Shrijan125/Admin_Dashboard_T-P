@@ -28,7 +28,9 @@ const PlacementPackageInput = ({
 }: PlacementPackageInputProps) => {
   return (
     <div>
-      <Label htmlFor={title}>{title} {isRequired && '*'}</Label>
+      <Label htmlFor={title}>
+        {title} {isRequired && '*'}
+      </Label>
       <div className="flex gap-1">
         <Input
           required={isRequired}
