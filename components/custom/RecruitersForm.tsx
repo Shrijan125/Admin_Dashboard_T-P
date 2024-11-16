@@ -136,7 +136,10 @@ const RecruitersForm = ({
         />
       )}
       <form
-        action={handleAction}
+        onClick={(e) => {
+          e.preventDefault();
+          handleAction(new FormData(e.currentTarget));
+        }}
         className="flex flex-col mt-8 gap-8 items-center"
       >
         <div className="flex flex-col w-1/2 gap-2">
